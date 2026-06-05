@@ -51,7 +51,7 @@ if st.button("🎬 Build Animation Player", type="secondary"):
         PROP_STANDARD = 0.80
         
         # Seed locked for direct comparative visual evaluation
-        np.random.seed(42) 
+        # np.random.seed(42) 
         inter_arrivals = np.random.lognormal(np.log(mean_arr) - 0.02, 0.2, NUM_CUSTOMERS)
         arrival_times = np.cumsum(inter_arrivals)
         job_types = ['standard' if np.random.rand() < PROP_STANDARD else 'complex' for _ in range(NUM_CUSTOMERS)]
